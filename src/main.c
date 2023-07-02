@@ -171,7 +171,7 @@ void TriggerAbstraction(clock_t clock) {
 int main(void) {
 	uint8_t entrada[ALARM_SIZE];
 
-	reloj = ClockCreate(REFRESH_TIME / 60, TriggerAbstraction);
+	reloj = ClockCreate(REFRESH_TIME, TriggerAbstraction);
 	board = BoardCreate();
 
 	SisTick_Init(REFRESH_TIME);
